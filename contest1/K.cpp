@@ -38,15 +38,15 @@ class Task {
         }
       }
     }
+  }
+
+  void GetAnswer() {
     int ptr = 0;
     for (int i = 0; i <= wes; ++i) {
       if (dp[number][i] > dp[number][ptr]) {
         ptr = i;
       }
     }
-  }
-
-  void GetAnswer() {
     std::vector<int> ans;
     for (int i = 0; i < number; ++i) {
       if (pr[number - i][ptr] > 0) {
